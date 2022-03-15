@@ -1,8 +1,9 @@
-function hello(name) {
-  const greeting = `hello ${name}`;
-  return greeting;
+const { runOpta } = require("./helpers");
+
+async function createCluster(action, settings) {
+  runOpta(action);
 }
 
 module.exports = {
-  hello,
+  createCluster,
 };

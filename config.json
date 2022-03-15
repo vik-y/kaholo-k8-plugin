@@ -1,0 +1,69 @@
+{
+  "name": "AWS-K8-OPTA",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.1.2",
+  "imgUrl": "logo.png",
+  "category": ["INFRASTRUCTURE MGMT", "CI/CD"],
+  "keywords": [
+    "cloud",
+    "cli",
+    "container",
+    "infra",
+    "infrastructure",
+    "platform",
+    "manage",
+    "cluster",
+    "kubernetes"
+  ],
+  "description": "Kaholo plaugin for integration with Terraform CLI.",
+  "methods": [
+    {
+      "name": "createCluster",
+      "viewName": "Create K8 Cluster",
+      "params": [
+        {
+          "name": "CLUSTER_NAME",
+          "viewName": "K8 cluster name",
+          "description": "A unique name for your kubernetes cluster",
+          "type": "string",
+          "required": true,
+          "default": false
+        },
+        {
+          "name": "AWS_ACCOUNT_ID",
+          "viewName": "AWS account id. Get this from your AWS console.",
+          "type": "string",
+          "required": true,
+          "default": false
+        },
+        {
+          "name": "AWS_REGION",
+          "viewName": "AWS region where you want to spawn the kubernetes cluster",
+          "type": "string",
+          "required": true,
+          "default": false
+        },
+        {
+          "name": "ACCESS_KEY_ID",
+          "viewName": "Aws access key id",
+          "type": "vault"
+        },
+        {
+          "name": "ACCESS_KEY_SECRET",
+          "viewName": "Aws access key secret",
+          "type": "vault",
+          "required": true
+        },
+        {
+          "name": "USE_SPOT",
+          "viewName": "Use Spot Instance",
+          "type": "boolean",
+          "description": "Do you want to use spot instances for your worker nodes?",
+          "learnUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html"
+        }
+      ]
+    }
+  ]
+}

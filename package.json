@@ -1,7 +1,7 @@
 {
-  "name": "kaholo-plugin-template",
+  "name": "kaholo-plugin-k8-aws",
   "version": "1.0.0",
-  "description": "A template for Kaholo plugin development",
+  "description": "Create kubernetes cluster on AWS",
   "main": "app.js",
   "scripts": {
     "test": "npx jest .",
